@@ -1,0 +1,69 @@
+<project name="[CEAL]CON" default="dist" basedir=".">
+	<description>
+        simple example build file
+    </description>
+	<!-- set global properties for this build -->
+	<property name="src" location="." />
+	<property name="build" location="build" />
+	<property name="dist" location="dist" />
+	<property name="lib" location="lib" />
+
+	<path id="classpath">
+	        <fileset dir="${lib}" includes="**/*.jar"/>
+	    </path>
+	
+	<target name="init" depends="clean">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<!-- Compile the java code from ${src} into ${build} -->	
+		
+		<javac srcdir="${src}" destdir="${build}" classpathref="classpath" />
+	</target>
+
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}" />
+
+		<jar destfile="${dist}/[CEAL]CON.jar" basedir="${build}">
+
+			<manifest>
+				<attribute name="Main-Class" value="cliente.CEALCONcliente" />
+				<attribute name="Class-Path" value=".\lib\log4j-1.2.15.jar"/>
+				<attribute name="Sealed" value="true" />
+			</manifest>
+		</jar>
+
+	</target>
+
+	<target name="yguard" depends="dist">
+		<taskdef name="yguard" classname="com.yworks.yguard.YGuardTask" classpath="E:\eclipse3.5.2\plugins\org.apache.ant_1.7.1.v20090120-1145\lib\yguard.jar; .\lib\log4j-1.2.15.jar" />
+		<yguard>
+			
+			<inoutpair in="${dist}/[CEAL]CON.jar" out="${dist}/[CEAL]CON0.3.jar"/>
+
+			<externalclasses>
+				<pathelement location=".\lib\log4j-1.2.15.jar"/>				     
+			</externalclasses>
+			
+			<rename mainclass="cliente.CEALCONcliente">				
+				<keep>				
+				   <class  name="componentes.I18N.*"/>				   		           
+				</keep>			
+				<property name="language-conformity" value="illegal"/>
+				<property name="naming-scheme" value="best"/>							
+			</rename>	
+		</yguard>
+	</target>
+
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}" />
+		<delete dir="${dist}/*.jar" />
+	</target>
+</project>

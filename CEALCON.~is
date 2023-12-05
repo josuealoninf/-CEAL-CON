@@ -1,0 +1,8 @@
+[Setup]
+AppName=CEALCON
+AppVerName=0.3
+DefaultDirName=C:\CEALCON
+
+
+[Languages]
+Name: en; MessagesFile: compiler:Default.isl
