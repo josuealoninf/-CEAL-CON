@@ -1,0 +1,3 @@
+Por defecto [CEAL]CON se visualiza en inglés, si desea seleccionar otro idioma vaya a 
+File -> Configuration, escoja el idioma y pulse save.
+Después reinicie la aplicación.

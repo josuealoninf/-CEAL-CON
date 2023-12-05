@@ -1,0 +1,10 @@
+Notas:
+
+¡Se está instalando [CEAL]CON 0.3! Visite http://www.cealweb.net para encontrar las últimas novedades e información sobre [CEAL]CON.
+
+Instalación y uso:
+
+[CEAL]CON necesita Java JRE6 o superior (1.6.20 recomendada). Para obtener la última versión de Java visite http://www.java.com
+
+Si necesita ayuda, registrese en http://www.cealweb.net y postee su duda en siguiente foro:
+http://www.cealweb.net/drs_plugins/forum/forum_viewforum.php?23

@@ -1,0 +1,7 @@
+By installing this software, you agree to the following terms and conditions:
+
+1) You will not distribute this product without giving proper citations to its authors, owners, or creators.
+2) You will not attempt to reverse-engineer or decompile this product.
+3) CEAL (http://www.cealweb.net) certifies this program as legitimate and malware free. However, if in the event of any unfortunate circumstances there is harm brought to your PC, game servers, or personal data, you will not hold CEAL (http://www.cealweb.net), its owners, or affiliates responsible for any of it. You accept this program "as is" and will use it at your own risk.
+
+Please select "I agree" below and click "Next" to continue installation.
